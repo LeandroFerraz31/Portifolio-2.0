@@ -4,9 +4,10 @@ import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 
 const Hero = () => {
-	const StyledHero = styled("div")(() => ({
-		background: "black",
+	const StyledHero = styled("div")(({theme}) => ({
+		background: theme.palette.primary.main,
 		height: "100vh",
+
 	}));
 
 	const StyledImg = styled("img")(() => ({
@@ -23,7 +24,7 @@ const Hero = () => {
 							<StyledImg src={Avatar} />
 						</Grid>
 						<Grid item xs={12} md={8}>
-							<Typography color="primary" variant="h1" textAlign="center">
+							<Typography color="primary.contrastText" variant="h1" textAlign="center">
 								Leandro Ferraz
 							</Typography>
 							<Typography color="primary" variant="h2" textAlign="center">
