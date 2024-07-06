@@ -23,7 +23,7 @@ const Hero = () => {
 	}));
 
 	const StyledImg = styled("img")(({theme}) => ({
-		width: "70%",
+		width: "75%",
 		borderRadius: "50%",
 		border: `1px solid ${theme.palette.primary.contrastText}`
 	}));
@@ -69,7 +69,7 @@ const Hero = () => {
 									display="flex"
 									justifyContent="center"
 								>
-									<StyledButton>
+									<StyledButton onClick={() => console.log("download")}>
 										<DownloadIcon />
 										<Typography>
 										Dowload CV
@@ -83,7 +83,7 @@ const Hero = () => {
 									display="flex"
 									justifyContent="center"
 								>
-									<StyledButton>
+									<StyledButton onClick={() => console.log("contact")}>
 										<EmailIcon />
 										<Typography>
 										Contact me
