@@ -13,6 +13,13 @@ const Hero = () => {
         justifyContent: "center",
         alignItems: "center",
         color: theme.palette.primary.contrastText,
+		[theme.breakpoints.up('xs')]:{			
+			paddingTop: "100px"
+		},
+
+		[theme.breakpoints.up('md')]:{			
+			paddingTop: "0"
+		}
 	}));
 
 	const StyledImg = styled("img")(({theme}) => ({
@@ -28,7 +35,7 @@ const Hero = () => {
 					<Grid container spacing={2}>
 						<Grid item xs={12} md={5}>
 							<Box position="relative">
-							<Box position="absolute" width={"130%"} top={-100} right={0}>
+							<Box position="absolute" width={"140%"} top={-100} right={0}>
 							<AnimatedBackground/>	
 							</Box>
 							<Box position="relative" textAlign="center">
