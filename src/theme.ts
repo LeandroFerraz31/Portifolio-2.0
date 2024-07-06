@@ -12,11 +12,12 @@ let theme = createTheme({
 
 	typography: {
 		fontFamily: [
+				"system-ui",
 			// '-apple-system',
 			// 'BlinkMacSystemFont',
 			// '"Segoe UI"',
 			// 'Roboto',
-			'"Helvetica Neue"',
+			// '"Helvetica Neue"',
 			// 'Arial',
 			// 'sans-serif',
 			// '"Apple Color Emoji"',
