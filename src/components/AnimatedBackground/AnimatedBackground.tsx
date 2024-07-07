@@ -3,7 +3,8 @@ import { Box } from "@mui/material"
 export const AnimatedBackground = () => {
     return (
         <Box>
-            <svg
+            {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
+<svg
                 className="BgAnimation__svg"
                 viewBox="0 0 602 602"
                 fill="none"
