@@ -82,17 +82,19 @@ const ProjectsImg = styled("img")(({theme}) => ({
               <Typography variant="body2" paragraph>
                 <strong>Technologies:</strong> JavaScript, HTML, CSS, Canvas Graphics
               </Typography>
-              <Box my={1} flex="1" display="flex" justifyContent="center" alignItems="center" gap="20px" >
+              <Grid item xs={12}  md={12}>
+              <Box my={1} flex="5" display="flex" justifyContent="center" alignItems="center" gap="20px" >
                 <ProjectButton variant="outlined" onClick={() => console.log("project")}>View Project</ProjectButton>
                 <ProjectButton variant="outlined" onClick={() => console.log("code")}>View Code</ProjectButton>
               </Box>
+              </Grid>
             </ProjectBox>
           </Grid>
           {/* Projeto 2 */}
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12}  md={6}>
             <ProjectBox>
             <Box display="flex" flexDirection="column" alignItems="flex-start" justifyContent="flex-start" max-width="100%" >
-              <Typography variant="h6" pr="100px" gutterBottom>Primeiro Portifolio</Typography>
+              <Typography variant="h6" gutterBottom>Primeiro Portifolio</Typography>
               <Typography variant="body2" color="primary.contrastText" gutterBottom>May 2023 - Jul 2023</Typography>
             </Box>
               <Box my={2}>
@@ -104,7 +106,7 @@ const ProjectsImg = styled("img")(({theme}) => ({
               <Typography variant="body2" paragraph>
                 <strong>Technologies:</strong> React, TypeScript, Material UI
               </Typography>
-              <Box my={1} flex="1" display="flex" justifyContent="center" alignItems="center" gap="20px">
+              <Box >
                 <ProjectButton variant="outlined" onClick={() => console.log("project")} >View Project</ProjectButton>
                 <ProjectButton variant="outlined" onClick={() => console.log("code")}>View Code</ProjectButton>
               </Box>
