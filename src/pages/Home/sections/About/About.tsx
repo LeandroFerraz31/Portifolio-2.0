@@ -2,7 +2,7 @@
 import { Box, Container, Grid, Typography, styled, Button, Divider } from "@mui/material";
 import SchoolIcon from '@mui/icons-material/School';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-// Definição do SkillButton estilizado
+
 const SkillButton = styled(Button)(({ theme }) => ({
   margin: theme.spacing(1),
   borderColor: theme.palette.primary.main,
@@ -11,21 +11,20 @@ const SkillButton = styled(Button)(({ theme }) => ({
     backgroundColor: theme.palette.primary.light,
     color: "#fff",
   },
-  width: "150px", // Largura fixa para os botões de habilidade
-  height: "40px", // Altura fixa para os botões de habilidade
+  width: "150px", 
+  height: "40px", 
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
 }));
 
 const About: React.FC = () => {
-  // Estilos para a seção "About"
   const AboutSection = styled(Box)(({ theme }) => ({
     backgroundColor: "#fff",
-    padding: theme.spacing(4),
+  padding: theme.spacing(4),
+  paddingBottom: theme.spacing(8), // Espaçamento adicional no final
+  minHeight: "100vh", // Garantir altura mínima
   }));
-
-  // Estilos para a caixa de experiência
   const ExperienceBox = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.primary.contrastText,
     color: theme.palette.primary.main,
@@ -33,12 +32,11 @@ const About: React.FC = () => {
     padding: theme.spacing(3),
     borderRadius: theme.shape.borderRadius,
     textAlign: "center",
-    width: "100%", // Ocupa todo o espaço disponível no Grid item
-    maxWidth: "300px", // Largura máxima para manter consistência
-    margin: "0 auto", // Margem automática para centralizar horizontalmente
+    width: "100%", 
+    maxWidth: "300px",
+    margin: "0 auto", 
   }));
 
-  // Estilos para a caixa de certificação
   const CertificationBox = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.primary.contrastText,
     color: theme.palette.primary.main,
@@ -46,16 +44,16 @@ const About: React.FC = () => {
     padding: theme.spacing(3),
     borderRadius: theme.shape.borderRadius,
     textAlign: "center",
-    width: "100%", // Ocupa todo o espaço disponível no Grid item
-    maxWidth: "300px", // Largura máxima para manter consistência
-    margin: "0 auto", // Margem automática para centralizar horizontalmente
+    width: "100%", 
+    maxWidth: "300px", 
+    margin: "0 auto", 
 
   }));
 
   return (
     <Container maxWidth="lg">
       <AboutSection>
-        <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" pb="20px">
+        <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" pb="20px" >
           About me
         </Typography>
         <Grid container spacing={3}>
@@ -75,13 +73,15 @@ const About: React.FC = () => {
               <Typography>Front-End Developer <br /> FullStack Developer</Typography>
             </CertificationBox>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12}>
             <Typography align="center">
               I am a FullStack developer in training, focused on learning various technologies through DevClub. I am enthusiastic about collaborating on meaningful projects and am actively seeking opportunities to apply my knowledge in a professional environment. Committed to achieving excellence, I am dedicated to expanding my skills and making a positive contribution to development teams.
             </Typography>
           </Grid>
-          <Grid item xs={12}>
-            <Divider variant="middle"  style={{ background: "black", width: "93%", }}/>
+
+          <Grid item xs={12} >
+            <Divider  style={{ background: "black", width: "100%", }}/>
+          
           </Grid>
           <Grid item xs={12}>
             <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" gutterBottom>
@@ -98,7 +98,7 @@ const About: React.FC = () => {
               <SkillButton variant="outlined">Typescript</SkillButton>
               <SkillButton variant="outlined">Node.js</SkillButton>
               <SkillButton variant="outlined">MongoDB</SkillButton>
-              {/* Adicione mais botões de skills conforme necessário */}
+              {/* Add more skill buttons as needed */}
             </Box>
           </Grid>
         </Grid>

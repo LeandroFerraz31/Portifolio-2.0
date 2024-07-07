@@ -8,18 +8,16 @@ import { AnimatedBackground } from "../../../../components/AnimatedBackground/An
 const Hero = () => {
 	const StyledHero = styled("div")(({ theme }) => ({
 		background: theme.palette.primary.main,
-		height: "100vh",
-		display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        color: theme.palette.primary.contrastText,
-		[theme.breakpoints.up('xs')]:{			
-			paddingTop: "100px"
-		},
-
-		[theme.breakpoints.up('md')]:{			
-			paddingTop: "0"
-		}
+  minHeight: "100vh",  // Use minHeight ao invés de height
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  color: theme.palette.primary.contrastText,
+  paddingTop: "100px",
+  paddingBottom: "50px", // Espaçamento adicional no final
+  [theme.breakpoints.up('md')]: {
+    paddingTop: "0",
+  }
 	}));
 
 	const StyledImg = styled("img")(({theme}) => ({
