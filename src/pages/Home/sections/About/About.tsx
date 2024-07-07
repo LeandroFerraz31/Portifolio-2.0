@@ -1,6 +1,7 @@
 
 import { Box, Container, Grid, Typography, styled, Button, Divider } from "@mui/material";
-
+import SchoolIcon from '@mui/icons-material/School';
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 // Definição do SkillButton estilizado
 const SkillButton = styled(Button)(({ theme }) => ({
   margin: theme.spacing(1),
@@ -60,23 +61,27 @@ const About: React.FC = () => {
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
             <ExperienceBox>
-              <Typography variant="h5">Experience</Typography>
+            <WorkspacePremiumIcon/>
+              <Typography variant="h5">
+                Experience
+                </Typography>
               <Typography>1 year <br /> FullStack Developer</Typography>
             </ExperienceBox>
           </Grid>
           <Grid item xs={12} md={6}>
             <CertificationBox>
+            <SchoolIcon/>
               <Typography variant="h5">Education</Typography>
               <Typography>Front-End Developer <br /> FullStack Developer</Typography>
             </CertificationBox>
           </Grid>
-          <Grid item xs={12}>
-            <Typography>
+          <Grid item xs={12} md={6}>
+            <Typography align="center">
               I am a FullStack developer in training, focused on learning various technologies through DevClub. I am enthusiastic about collaborating on meaningful projects and am actively seeking opportunities to apply my knowledge in a professional environment. Committed to achieving excellence, I am dedicated to expanding my skills and making a positive contribution to development teams.
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <Divider variant="middle" style={{ background: "black", width: "100%" }} />
+            <Divider variant="middle"  style={{ background: "black", width: "93%", }}/>
           </Grid>
           <Grid item xs={12}>
             <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" gutterBottom>
