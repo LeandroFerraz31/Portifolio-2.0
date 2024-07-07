@@ -97,7 +97,7 @@ const ProjectsImg = styled("img")(({theme}) => ({
               <Typography variant="h6" gutterBottom>Primeiro Portifolio</Typography>
               <Typography variant="body2" color="primary.contrastText" gutterBottom>May 2023 - Jul 2023</Typography>
             </Box>
-              <Box my={2}>
+              <Box my={5}>
                 <ProjectsImg src={Portifolio} alt="Project-2" style={{ width: '100%', borderRadius: '8px' }} />
               </Box>
               <Typography variant="body1" paragraph>
@@ -106,10 +106,12 @@ const ProjectsImg = styled("img")(({theme}) => ({
               <Typography variant="body2" paragraph>
                 <strong>Technologies:</strong> React, TypeScript, Material UI
               </Typography>
-              <Box >
+              <Grid item xs={12}  md={12}>
+              <Box  my={1} flex="1" display="flex" justifyContent="center" alignItems="center" gap="20px">
                 <ProjectButton variant="outlined" onClick={() => console.log("project")} >View Project</ProjectButton>
                 <ProjectButton variant="outlined" onClick={() => console.log("code")}>View Code</ProjectButton>
               </Box>
+              </Grid>
             </ProjectBox>
           </Grid>
           {/* Adicione mais projetos conforme necessário */}
