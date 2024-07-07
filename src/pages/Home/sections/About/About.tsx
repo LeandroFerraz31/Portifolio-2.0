@@ -21,7 +21,7 @@ const SkillButton = styled(Button)(({ theme }) => ({
 const About: React.FC = () => {
   const AboutSection = styled(Box)(({ theme }) => ({
     backgroundColor: "#fff",
-  padding: theme.spacing(4),
+  padding: theme.spacing(0),
   paddingBottom: theme.spacing(8), // Espaçamento adicional no final
   minHeight: "100vh", // Garantir altura mínima
   }));
