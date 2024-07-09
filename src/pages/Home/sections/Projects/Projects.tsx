@@ -84,8 +84,8 @@ const ProjectsImg = styled("img")(({theme}) => ({
               </Typography>
               <Grid item xs={12}  md={12}>
               <Box my={1} flex="5" display="flex" justifyContent="center" alignItems="center" gap="20px" >
-                <ProjectButton variant="outlined" onClick={() => console.log("project")}>View Project</ProjectButton>
-                <ProjectButton variant="outlined" onClick={() => console.log("code")}>View Code</ProjectButton>
+                <ProjectButton variant="outlined" onClick={() => console.log("project")} sx={{ fontSize: 12 }}>View Project</ProjectButton>
+                <ProjectButton variant="outlined" onClick={() => console.log("code")} sx={{ fontSize: 12 }}>View Code</ProjectButton>
               </Box>
               </Grid>
             </ProjectBox>
@@ -108,8 +108,8 @@ const ProjectsImg = styled("img")(({theme}) => ({
               </Typography>
               <Grid item xs={12}  md={12}>
               <Box  my={1} flex="1" display="flex" justifyContent="center" alignItems="center" gap="20px">
-                <ProjectButton variant="outlined" onClick={() => console.log("project")} >View Project</ProjectButton>
-                <ProjectButton variant="outlined" onClick={() => console.log("code")}>View Code</ProjectButton>
+                <ProjectButton variant="outlined" onClick={() => console.log("project")} sx={{ fontSize: 12 }}>View Project</ProjectButton>
+                <ProjectButton variant="outlined" onClick={() => console.log("code")}sx={{ fontSize: 12 }}>View Code</ProjectButton>
               </Box>
               </Grid>
             </ProjectBox>

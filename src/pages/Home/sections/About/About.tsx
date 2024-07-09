@@ -22,8 +22,10 @@ const About: React.FC = () => {
   const AboutSection = styled(Box)(({ theme }) => ({
     backgroundColor: "#fff",
   padding: theme.spacing(0),
+  paddingTop: theme.spacing(5),
   paddingBottom: theme.spacing(8), // Espaçamento adicional no final
   minHeight: "100vh", // Garantir altura mínima
+
   }));
   const ExperienceBox = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.primary.contrastText,
@@ -53,7 +55,7 @@ const About: React.FC = () => {
   return (
     <Container maxWidth="lg">
       <AboutSection>
-        <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" pb="20px" >
+        <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" pb="5%" >
           About me
         </Typography>
         <Grid container spacing={3}>
@@ -87,7 +89,7 @@ const About: React.FC = () => {
             <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" gutterBottom>
               Skills
             </Typography>
-            <Box display="flex" justifyContent="center" flexWrap="wrap">
+            <Box display="flex" justifyContent="center" flexWrap="wrap" >
               <SkillButton variant="outlined">JavaScript</SkillButton>
               <SkillButton variant="outlined">React</SkillButton>
               <SkillButton variant="outlined">Material UI</SkillButton>
