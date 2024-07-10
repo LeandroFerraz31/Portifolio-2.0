@@ -1,4 +1,5 @@
-import { AppBar, MenuItem, Toolbar, styled } from "@mui/material";
+
+import { AppBar, MenuItem, Toolbar, styled,  } from "@mui/material";
 
 const Navbar = () => {
 	const StyledToolbar = styled(Toolbar)(() => ({
@@ -10,7 +11,7 @@ const Navbar = () => {
 		<>
 			<AppBar position='fixed'>
 				<StyledToolbar>
-					<MenuItem>About</MenuItem>
+					<MenuItem >About</MenuItem>
 					<MenuItem>Skill</MenuItem>
 					<MenuItem>Project</MenuItem>
 				</StyledToolbar>
