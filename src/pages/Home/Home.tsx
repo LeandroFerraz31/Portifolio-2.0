@@ -5,6 +5,8 @@ import Hero from "./sections/Hero/Hero";
 import Footer from "./sections/Footer/Footer";
 
 const Home = () => {
+  
+
   return (
     <>
       <NavBar />

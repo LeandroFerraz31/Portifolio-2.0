@@ -68,7 +68,7 @@ const Navbar = () => {
 			<Divider component="li" />
 			<ListItem button onClick={() => scrollToSection("footer-section")}>
 			<ConnectWithoutContactTwoToneIcon/>
-				<ListItemText primary='Conexões' />
+				<ListItemText primary='Connections' />
 			</ListItem>
 		</List>
 	);
@@ -92,7 +92,7 @@ const Navbar = () => {
 							</MenuItem>
 							<MenuItem onClick={() => scrollToSection("footer-section")}>
 							
-								Conexões
+							Connections
 							</MenuItem>
 						</StyledToolbar>
 					</Hidden>
@@ -117,7 +117,7 @@ const Navbar = () => {
 					onClose={toggleDrawer(false)}
 					sx={{
 						"& .MuiDrawer-paper": {
-							height: "34%", // Defina a altura do Drawer aqui
+							height: "30%", // Defina a altura do Drawer aqui
 							
 						},
 					}}

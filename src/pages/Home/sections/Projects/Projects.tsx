@@ -2,6 +2,7 @@
 import { Box, Container, Grid, Typography, styled, Button, } from "@mui/material";
 import Calc from "../../../../assets/images/calculadora.png";
 import Portifolio from "../../../../assets/images/portifolio.png";
+import { Link } from 'react-router-dom';
 
 const Projects: React.FC = () => {
     const StyledProjects = styled("div")(({ theme }) => ({
