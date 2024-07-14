@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   const handleContactMe = () => {
-    window.open('https://api.whatsapp.com/send?phone=051983012611');
+    window.open('https://api.whatsapp.com/send?phone=5551983012611');
   };
 
   const StyledHero = styled("div")(({ theme }) => ({
@@ -59,8 +59,8 @@ const Hero = () => {
 
   return (
     <>
-      <StyledHero>
-        <Container maxWidth="lg">
+      <StyledHero id="about-section">
+        <Container maxWidth="lg" >
           <Grid container spacing={2}>
             <Grid item xs={12} md={5}>
               <Box position="relative">
@@ -88,7 +88,7 @@ const Hero = () => {
               >
                 I'm a {typedText}
               </Typography>
-              <Grid container display="flex" justifyContent="center" spacing={4} pt={3}>
+              <Grid container display="flex" justifyContent="center" spacing={4} pt={4}>
                 <Grid
                   item
                   xs={12}

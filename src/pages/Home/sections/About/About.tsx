@@ -3,6 +3,16 @@ import { Box, Container, Grid, Typography, styled, Button, Divider } from "@mui/
 import SchoolIcon from '@mui/icons-material/School';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 
+const About = () => {
+  const StyledAbout = styled(Box)(({ theme }) => ({
+    backgroundColor: "#fff",
+  padding: theme.spacing(3),
+  paddingTop: theme.spacing(8),
+  paddingBottom: theme.spacing(8), // Espaçamento adicional no final
+  minHeight: "100vh", // Garantir altura mínima
+
+  }));
+
 const SkillButton = styled(Button)(({ theme }) => ({
   margin: theme.spacing(1),
   borderColor: theme.palette.primary.main,
@@ -18,15 +28,7 @@ const SkillButton = styled(Button)(({ theme }) => ({
   alignItems: "center",
 }));
 
-const About: React.FC = () => {
-  const AboutSection = styled(Box)(({ theme }) => ({
-    backgroundColor: "#fff",
-  padding: theme.spacing(0),
-  paddingTop: theme.spacing(5),
-  paddingBottom: theme.spacing(8), // Espaçamento adicional no final
-  minHeight: "100vh", // Garantir altura mínima
 
-  }));
   const ExperienceBox = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.primary.contrastText,
     color: theme.palette.primary.main,
@@ -53,13 +55,13 @@ const About: React.FC = () => {
   }));
 
   return (
-    <Container maxWidth="lg">
-      <AboutSection>
+    <StyledAbout id="skill-section">
+    <Container maxWidth="lg" >
         <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" pb="5%" >
           About me
         </Typography>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+        <Grid container spacing={3} display={"flex"} justifyContent={"center"}>
+          <Grid item xs={12} md={4}>
             <ExperienceBox>
             <WorkspacePremiumIcon/>
               <Typography variant="h5">
@@ -68,7 +70,7 @@ const About: React.FC = () => {
               <Typography>1 year <br /> FullStack Developer</Typography>
             </ExperienceBox>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={4}>
             <CertificationBox>
             <SchoolIcon/>
               <Typography variant="h5">Education</Typography>
@@ -104,8 +106,8 @@ const About: React.FC = () => {
             </Box>
           </Grid>
         </Grid>
-      </AboutSection>
     </Container>
+    </StyledAbout>
   );
 };
 
