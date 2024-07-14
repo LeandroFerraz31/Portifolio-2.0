@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
         
       }}
     >
-      <Container maxWidth="sm">
+      <Container maxWidth="sm" id="footer-section">
         <Box sx={{  display: 'flex', justifyContent: 'center', mb: 2 }}>
           <Link href="https://github.com/LeandroFerraz31" target="_blank" rel="noopener" color="inherit">
             <IconButton sx={{ mx:5,'&:hover': { transform: 'scale(1.2)' } }}>

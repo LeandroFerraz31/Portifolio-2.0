@@ -6,7 +6,7 @@ import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 const About = () => {
   const StyledAbout = styled(Box)(({ theme }) => ({
     backgroundColor: "#fff",
-  padding: theme.spacing(3),
+  padding: theme.spacing(0),
   paddingTop: theme.spacing(8),
   paddingBottom: theme.spacing(8), // Espaçamento adicional no final
   minHeight: "100vh", // Garantir altura mínima
@@ -91,8 +91,8 @@ const SkillButton = styled(Button)(({ theme }) => ({
             <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" gutterBottom>
               Skills
             </Typography>
-            <Box display="flex" justifyContent="center" flexWrap="wrap" >
-              <SkillButton variant="outlined">JavaScript</SkillButton>
+            <Box display="flex" justifyContent="center" flexWrap="wrap"  >
+              <SkillButton variant="outlined" >JavaScript</SkillButton>
               <SkillButton variant="outlined">React</SkillButton>
               <SkillButton variant="outlined">Material UI</SkillButton>
               <SkillButton variant="outlined">CSS</SkillButton>

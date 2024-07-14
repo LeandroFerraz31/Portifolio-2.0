@@ -1,26 +1,45 @@
-
-import { AppBar, Container, MenuItem, Toolbar, styled, Drawer, List, ListItem, ListItemText, Paper } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
+import {
+	AppBar,
+	Container,
+	MenuItem,
+	Toolbar,
+	styled,
+	Drawer,
+	List,
+	ListItem,
+	ListItemText,
+	IconButton,
+	Hidden,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import Hidden from "@mui/material/Hidden";
 import { useState, type MouseEvent, type KeyboardEvent } from "react";
+import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
+import StorageTwoToneIcon from '@mui/icons-material/StorageTwoTone';
+import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
+import ConnectWithoutContactTwoToneIcon from '@mui/icons-material/ConnectWithoutContactTwoTone';
+import Divider from '@mui/material/Divider';
+
 
 
 const Navbar = () => {
 	const [drawerOpen, setDrawerOpen] = useState(false);
 
-	const toggleDrawer = (open: boolean) => (event: MouseEvent | KeyboardEvent) => {
-		if (event.type === 'keydown' && ((event as KeyboardEvent).key === 'Tab' || (event as KeyboardEvent).key === 'Shift')) {
-			return;
-		}
-		setDrawerOpen(open);
-    
-	};
+	const toggleDrawer =
+		(open: boolean) => (event: MouseEvent | KeyboardEvent) => {
+			if (
+				event.type === "keydown" &&
+				((event as KeyboardEvent).key === "Tab" ||
+					(event as KeyboardEvent).key === "Shift")
+			) {
+				return;
+			}
+			setDrawerOpen(open);
+		};
 
 	const scrollToSection = (id: string) => {
 		const section = document.getElementById(id);
 		if (section) {
-			section.scrollIntoView({ behavior: 'smooth' });
+			section.scrollIntoView({ behavior: "smooth" });
 		}
 		setDrawerOpen(false);
 	};
@@ -30,35 +49,51 @@ const Navbar = () => {
 		justifyContent: "space-between",
 	}));
 
-  const StyledDrawer = styled(Paper)(() => ({
-			height: "50%", // Defina a altura do Drawer aqui
-		
-	}));
-
 	const drawerItems = (
 		<List>
-			<ListItem button onClick={() => scrollToSection('about-section')}>
-				<ListItemText primary="About" />
+			<ListItem button onClick={() => scrollToSection("about-section")}>
+			<AccountCircleTwoToneIcon/>
+				<ListItemText primary='About' />
 			</ListItem>
-			<ListItem button onClick={() => scrollToSection('skill-section')}>
-				<ListItemText primary="Skill" />
+			<Divider component="li" />
+			<ListItem button onClick={() => scrollToSection("skill-section")}>
+			<StorageTwoToneIcon/>
+				<ListItemText primary='Skill' />
 			</ListItem>
-			<ListItem button onClick={() => scrollToSection('project-section')}>
-				<ListItemText primary="Project" />
+			<Divider component="li" />
+			<ListItem button onClick={() => scrollToSection("project-section")}>
+			<AccountTreeTwoToneIcon/>
+				<ListItemText primary='Project' />
+			</ListItem>
+			<Divider component="li" />
+			<ListItem button onClick={() => scrollToSection("footer-section")}>
+			<ConnectWithoutContactTwoToneIcon/>
+				<ListItemText primary='Conexões' />
 			</ListItem>
 		</List>
 	);
 
 	return (
 		<>
-    <StyledDrawer>
 			<Container maxWidth='lg'>
 				<AppBar position='fixed'>
 					<Hidden mdDown>
 						<StyledToolbar>
-							<MenuItem onClick={() => scrollToSection('about-section')}>About</MenuItem>
-							<MenuItem onClick={() => scrollToSection('skill-section')}>Skill</MenuItem>
-							<MenuItem onClick={() => scrollToSection('project-section')}>Project</MenuItem>
+							<MenuItem onClick={() => scrollToSection("about-section")} >
+								About
+							</MenuItem>
+							<MenuItem onClick={() => scrollToSection("skill-section")}>
+							
+								Skill
+							</MenuItem>
+							<MenuItem onClick={() => scrollToSection("project-section")}>
+							
+								Project
+							</MenuItem>
+							<MenuItem onClick={() => scrollToSection("footer-section")}>
+							
+								Conexões
+							</MenuItem>
 						</StyledToolbar>
 					</Hidden>
 
@@ -76,14 +111,22 @@ const Navbar = () => {
 						</StyledToolbar>
 					</Hidden>
 				</AppBar>
-				<Drawer anchor='left' open={drawerOpen} onClose={toggleDrawer(false)}>
+				<Drawer
+					anchor='left'
+					open={drawerOpen}
+					onClose={toggleDrawer(false)}
+					sx={{
+						"& .MuiDrawer-paper": {
+							height: "34%", // Defina a altura do Drawer aqui
+							
+						},
+					}}
+				>
 					{drawerItems}
 				</Drawer>
 			</Container>
-      </StyledDrawer>
 		</>
 	);
 };
-
 
 export default Navbar;

@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
         background: theme.palette.primary.main,
         minHeight: "100vh", // Use minHeight ao invés de height
         color: theme.palette.primary.contrastText,
-        padding: theme.spacing(3),
+        padding: theme.spacing(1),
         paddingTop: theme.spacing(8), // Espaçamento superior
         paddingBottom: theme.spacing(8), // Espaçamento inferior
       
