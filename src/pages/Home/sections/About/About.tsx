@@ -11,29 +11,28 @@ const About = () => {
     <StyledAbout id="skill-section">
       <Container maxWidth="lg">
         <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" pb="5%">
-          About me
+          Sobre mim
         </Typography>
         <Grid container spacing={3} display={"flex"} justifyContent={"center"}>
           <Grid item xs={12} md={4} ref={experienceRef} className={`fade-in ${experienceInView ? 'active' : ''}`}>
             <ExperienceBox>
               <WorkspacePremiumIcon />
               <Typography variant="h5">
-                Experience
+              Experiência
               </Typography>
-              <Typography>1 year <br /> FullStack Developer</Typography>
+              <Typography>1 ano <br /> Desenvolvedor FullStack</Typography>
             </ExperienceBox>
           </Grid>
           <Grid item xs={12} md={4} ref={educationRef} className={`fade-in ${educationInView ? 'active' : ''}`}>
             <CertificationBox>
               <SchoolIcon />
-              <Typography variant="h5">Education</Typography>
-              <Typography>Front-End Developer <br /> FullStack Developer</Typography>
+              <Typography variant="h5">Educação</Typography>
+              <Typography>Desenvolvedor Front-End <br />Desenvolvedor FullStack</Typography>
             </CertificationBox>
           </Grid>
           <Grid item xs={12}>
             <Typography align="center">
-              I am a FullStack developer in training, focused on learning various technologies through DevClub. I am enthusiastic about collaborating on meaningful projects and am actively seeking opportunities to apply my knowledge in a professional environment. Committed to achieving excellence, I am dedicated to expanding my skills and making a positive contribution to development teams.
-            </Typography>
+            Sou desenvolvedor FullStack em formação, focado em aprender diversas tecnologias através do DevClub. Estou entusiasmado em colaborar em projetos significativos e procuro ativamente oportunidades para aplicar meu conhecimento em um ambiente profissional. Comprometido em alcançar a excelência, me dedico a expandir minhas habilidades e contribuir positivamente para as equipes de desenvolvimento.            </Typography>
           </Grid>
 
           <Grid item xs={12}>
@@ -42,7 +41,7 @@ const About = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" gutterBottom>
-              Skills
+            Habilidades
             </Typography>
             <Box display="flex" justifyContent="center" flexWrap="wrap">
               <SkillButton variant="outlined">JavaScript</SkillButton>

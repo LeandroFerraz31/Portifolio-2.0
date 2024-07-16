@@ -2,9 +2,32 @@
 import { Box, Container, Grid, Typography, styled, Button, } from "@mui/material";
 import Calc from "../../../../assets/images/calculadora.png";
 import Portifolio from "../../../../assets/images/portifolio.png";
-import { Link } from 'react-router-dom';
+
+
 
 const Projects: React.FC = () => {
+
+ 
+    const handleViewProject = () => {
+      const pdfPath = 'https://portifolioferraz.netlify.app/';
+      window.open(pdfPath, '_blank');
+    };
+  
+    const handleViewCode = () => {
+      window.open('https://github.com/LeandroFerraz31/Portifolio-Ferraz');
+    };
+
+    const handleViewCalc = () => {
+      const pdfPath = 'https://imaginative-chaja-c62aba.netlify.app/';
+      window.open(pdfPath, '_blank');
+    };
+  
+    const handleViewCodeCalc = () => {
+      window.open('https://github.com/LeandroFerraz31/calculadora-emprestimo-br');
+    };
+
+
+
     const StyledProjects = styled("div")(({ theme }) => ({
         background: theme.palette.primary.main,
         minHeight: "100vh", // Use minHeight ao invés de height
@@ -64,7 +87,7 @@ const ProjectsImg = styled("img")(({theme}) => ({
     <StyledProjects id="project-section">
     <Container maxWidth="lg" >
         <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" pb="5%" color="primary.contrastText">
-          Projects
+          Projetos
         </Typography>
         <Grid container spacing={3}>
           {/* Projeto 1 */}
@@ -78,15 +101,15 @@ const ProjectsImg = styled("img")(({theme}) => ({
                 <ProjectsImg src={Calc} alt="Project-1" style={{ width: '100%', borderRadius: '8px' }} />
               </Box>
               <Typography variant="body1" paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta semper velit vel rutrum. Aliquam vulputate, nisi eget tristique mattis, nisi sem faucibus eros, a auctor felis sem ut mauris. Phasellus a ultrices elit. Curabitur ut diam eu orci auctor pretium.
+              A Calculadora de Empréstimo permite ao usuário inserir o valor do empréstimo, taxa de juros e prazo em meses. Após clicar em "Calcular", são exibidos os resultados: juros mensais, juros anuais, valor total e pagamento mensal. A interface é estilizada com CSS e adaptada para diferentes dispositivos. A função JavaScript calculateLoan() processa os dados inseridos e atualiza os resultados na página.              
               </Typography>
               <Typography variant="body2" paragraph>
-                <strong>Technologies:</strong> JavaScript, HTML, CSS, Canvas Graphics
+                <strong>Technologies:</strong> JavaScript, HTML, CSS
               </Typography>
               <Grid item xs={12}  md={12}>
-              <Box my={1} flex="5" display="flex" justifyContent="center" alignItems="center" gap="20px" >
-                <ProjectButton variant="outlined" onClick={() => console.log("project")} sx={{ fontSize: 11 }}>View Project</ProjectButton>
-                <ProjectButton variant="outlined" onClick={() => console.log("code")} sx={{ fontSize: 11 }}>View Code</ProjectButton>
+              <Box my={1} flex="1" display="flex" justifyContent="center" alignItems="center" gap="20px" >
+                <ProjectButton variant="outlined" onClick={handleViewCalc} sx={{ fontSize: 11 }}>Ver Projeto</ProjectButton>
+                <ProjectButton variant="outlined" onClick={handleViewCodeCalc} sx={{ fontSize: 11 }}>Ver Código</ProjectButton>
               </Box>
               </Grid>
             </ProjectBox>
@@ -98,19 +121,19 @@ const ProjectsImg = styled("img")(({theme}) => ({
               <Typography variant="h6" gutterBottom>Primeiro Portifolio</Typography>
               <Typography variant="body2" color="primary.contrastText" gutterBottom>May 2023 - Jul 2023</Typography>
             </Box>
-              <Box my={5}>
+              <Box my={3.8}>
                 <ProjectsImg src={Portifolio} alt="Project-2" style={{ width: '100%', borderRadius: '8px' }} />
               </Box>
               <Typography variant="body1" paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta semper velit vel rutrum. Aliquam vulputate, nisi eget tristique mattis, nisi sem faucibus eros, a auctor felis sem ut mauris. Phasellus a ultrices elit. Curabitur ut diam eu orci auctor pretium.
-              </Typography>
+              O Portfólio Pessoal é um site Front End que destaca habilidades e projetos do usuário. Organizado em seções como introdução, biografia e lista de projetos, utiliza HTML para estrutura e CSS para estilização responsiva. Cada projeto inclui imagens e links externos para detalhes adicionais. Elementos interativos como botões de contato e links para redes sociais são integrados para facilitar a interação.              </Typography>
               <Typography variant="body2" paragraph>
                 <strong>Technologies:</strong> React, TypeScript, Material UI
               </Typography>
               <Grid item xs={12}  md={12}>
               <Box  my={1} flex="1" display="flex" justifyContent="center" alignItems="center" gap="20px">
-                <ProjectButton variant="outlined" onClick={() => console.log("project")} sx={{ fontSize: 11 }}>View Project</ProjectButton>
-                <ProjectButton variant="outlined" onClick={() => console.log("code")}sx={{ fontSize: 11 }}>View Code</ProjectButton>
+                <ProjectButton variant="outlined" onClick={handleViewProject} sx={{ fontSize: 11 }}>
+                Ver Projeto</ProjectButton>
+                <ProjectButton variant="outlined" onClick={handleViewCode}sx={{ fontSize: 11 }}>Ver Código</ProjectButton>
               </Box>
               </Grid>
             </ProjectBox>

@@ -53,22 +53,22 @@ const Navbar = () => {
 		<List>
 			<ListItem button onClick={() => scrollToSection("about-section")}>
 			<AccountCircleTwoToneIcon/>
-				<ListItemText primary='About' />
+				<ListItemText primary='Inicio' />
 			</ListItem>
 			<Divider component="li" />
 			<ListItem button onClick={() => scrollToSection("skill-section")}>
 			<StorageTwoToneIcon/>
-				<ListItemText primary='Skill' />
+				<ListItemText primary='Sobre' />
 			</ListItem>
 			<Divider component="li" />
 			<ListItem button onClick={() => scrollToSection("project-section")}>
 			<AccountTreeTwoToneIcon/>
-				<ListItemText primary='Project' />
+				<ListItemText primary='Projetos' />
 			</ListItem>
 			<Divider component="li" />
 			<ListItem button onClick={() => scrollToSection("footer-section")}>
 			<ConnectWithoutContactTwoToneIcon/>
-				<ListItemText primary='Connections' />
+				<ListItemText primary='Conexões' />
 			</ListItem>
 		</List>
 	);
@@ -80,19 +80,19 @@ const Navbar = () => {
 					<Hidden mdDown>
 						<StyledToolbar>
 							<MenuItem onClick={() => scrollToSection("about-section")} >
-								About
+								Inicio
 							</MenuItem>
 							<MenuItem onClick={() => scrollToSection("skill-section")}>
 							
-								Skill
+								Sobre
 							</MenuItem>
 							<MenuItem onClick={() => scrollToSection("project-section")}>
 							
-								Project
+								Projetos
 							</MenuItem>
 							<MenuItem onClick={() => scrollToSection("footer-section")}>
 							
-							Connections
+							Conexções
 							</MenuItem>
 						</StyledToolbar>
 					</Hidden>

@@ -37,7 +37,7 @@ const Hero = () => {
   }));
 
   const [typedText, setTypedText] = React.useState('');
-  const targetText = "Developer FullStack";
+  const targetText = "Desenvolvedor FullStack";
 
   React.useEffect(() => {
     const textSpeed = 100; 
@@ -86,7 +86,7 @@ const Hero = () => {
                 variant="h2"
                 textAlign="center"
               >
-                I'm a {typedText}
+                Eu sou um {typedText}
               </Typography>
               <Grid container display="flex" justifyContent="center" spacing={4} pt={4}>
                 <Grid
@@ -113,7 +113,7 @@ const Hero = () => {
                   <StyledButton onClick={handleContactMe}>
                     <WhatsAppIcon/>
                     <Typography>
-                      Contact me
+                    Contate-me
                     </Typography>
                   </StyledButton>
                 </Grid>
