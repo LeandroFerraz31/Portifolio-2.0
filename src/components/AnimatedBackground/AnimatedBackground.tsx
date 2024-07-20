@@ -2,7 +2,10 @@ import { Box } from "@mui/material"
 
 export const AnimatedBackground = () => {
     return (
-        <Box>
+        <Box sx={{
+            overflowX: 'hidden',  // Impede o scroll horizontal
+            width: '100%',  // Garante que o Box ocupe toda a largura disponível
+          }}>
             {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
 <svg
                 className="BgAnimation__svg"

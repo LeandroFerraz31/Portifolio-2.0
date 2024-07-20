@@ -75,8 +75,13 @@ const Navbar = () => {
 
 	return (
 		<>
-			<Container maxWidth='lg'>
-				<AppBar position='fixed'>
+			<Container maxWidth="lg">
+				<AppBar position='fixed'
+				sx={{
+				  overflowX: 'hidden',
+				  width: '100%',
+				}}
+				>
 					<Hidden mdDown>
 						<StyledToolbar>
 							<MenuItem onClick={() => scrollToSection("about-section")} >
@@ -92,7 +97,7 @@ const Navbar = () => {
 							</MenuItem>
 							<MenuItem onClick={() => scrollToSection("footer-section")}>
 							
-							Conexções
+							Conexões
 							</MenuItem>
 						</StyledToolbar>
 					</Hidden>
@@ -117,7 +122,7 @@ const Navbar = () => {
 					onClose={toggleDrawer(false)}
 					sx={{
 						"& .MuiDrawer-paper": {
-							height: "30%", // Defina a altura do Drawer aqui
+							height: "32%", // Defina a altura do Drawer aqui
 							
 						},
 					}}

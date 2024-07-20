@@ -89,7 +89,7 @@ const ProjectsImg = styled("img")(({theme}) => ({
         <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" pb="5%" color="primary.contrastText">
           Projetos
         </Typography>
-        <Grid container spacing={3}>
+        <Grid container spacing={3} display={"flex"} justifyContent={"center"}>
           {/* Projeto 1 */}
           <Grid item xs={12} md={6}>
             <ProjectBox>
@@ -106,10 +106,10 @@ const ProjectsImg = styled("img")(({theme}) => ({
               <Typography variant="body2" paragraph>
                 <strong>Technologies:</strong> JavaScript, HTML, CSS
               </Typography>
-              <Grid item xs={12}  md={12}>
-              <Box my={1} flex="1" display="flex" justifyContent="center" alignItems="center" gap="20px" >
-                <ProjectButton variant="outlined" onClick={handleViewCalc} sx={{ fontSize: 11 }}>Ver Projeto</ProjectButton>
-                <ProjectButton variant="outlined" onClick={handleViewCodeCalc} sx={{ fontSize: 11 }}>Ver Código</ProjectButton>
+              <Grid item xs={12}  md={12} >
+              <Box my={1} display="flex" justifyContent="center" alignItems="center" gap="20px" >
+                <ProjectButton variant="outlined" onClick={handleViewCalc} sx={{ fontSize: 12 }}>Ver Projeto</ProjectButton>
+                <ProjectButton variant="outlined" onClick={handleViewCodeCalc} sx={{ fontSize: 12 }}>Ver Código</ProjectButton>
               </Box>
               </Grid>
             </ProjectBox>
@@ -130,10 +130,10 @@ const ProjectsImg = styled("img")(({theme}) => ({
                 <strong>Technologies:</strong> React, TypeScript, Material UI
               </Typography>
               <Grid item xs={12}  md={12}>
-              <Box  my={1} flex="1" display="flex" justifyContent="center" alignItems="center" gap="20px">
-                <ProjectButton variant="outlined" onClick={handleViewProject} sx={{ fontSize: 11 }}>
+              <Box  my={1} display="flex" alignItems="center" gap="20px">
+                <ProjectButton variant="outlined" onClick={handleViewProject} sx={{ fontSize: 12 }}>
                 Ver Projeto</ProjectButton>
-                <ProjectButton variant="outlined" onClick={handleViewCode}sx={{ fontSize: 11 }}>Ver Código</ProjectButton>
+                <ProjectButton variant="outlined" onClick={handleViewCode}sx={{ fontSize: 12 }}>Ver Código</ProjectButton>
               </Box>
               </Grid>
             </ProjectBox>
