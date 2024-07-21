@@ -10,6 +10,7 @@ import {
 	ListItemText,
 	IconButton,
 	Hidden,
+	Grid,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState, type MouseEvent, type KeyboardEvent } from "react";
@@ -51,6 +52,7 @@ const Navbar = () => {
 
 	const drawerItems = (
 		<List>
+			<Grid item xs={12} sm={6}>
 			<ListItem button onClick={() => scrollToSection("about-section")}>
 			<AccountCircleTwoToneIcon/>
 				<ListItemText primary='Inicio' />
@@ -70,17 +72,20 @@ const Navbar = () => {
 			<ConnectWithoutContactTwoToneIcon/>
 				<ListItemText primary='Conexões' />
 			</ListItem>
+			</Grid>
 		</List>
+		
 	);
 
 	return (
 		<>
-			<Container maxWidth="lg">
+			<Container maxWidth="lg" >
 				<AppBar position='fixed'
 				sx={{
 				  overflowX: 'hidden',
 				  width: '100%',
 				}}
+
 				>
 					<Hidden mdDown>
 						<StyledToolbar>

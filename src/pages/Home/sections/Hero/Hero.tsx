@@ -37,7 +37,7 @@ const Hero = () => {
   }));
 
   const [typedText, setTypedText] = React.useState('');
-  const targetText = "Desenvolvedor FullStack";
+  const targetText = "Eu sou um Desenvolvedor FullStack";
 
   React.useEffect(() => {
     const textSpeed = 100; 
@@ -84,9 +84,10 @@ const Hero = () => {
               <Typography
                 color="primary.contrastText"
                 variant="h2"
+                
                 textAlign="center"
               >
-                Eu sou um {typedText}
+                 {typedText}
               </Typography>
               <Grid container display="flex" justifyContent="center" spacing={4} pt={4}>
                 <Grid

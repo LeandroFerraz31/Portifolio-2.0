@@ -89,7 +89,7 @@ const ProjectsImg = styled("img")(({theme}) => ({
         <Typography variant="h2" display="flex" justifyContent="center" alignItems="center" pb="5%" color="primary.contrastText">
           Projetos
         </Typography>
-        <Grid container spacing={3} display={"flex"} justifyContent={"center"}>
+        <Grid container spacing={1} display={"flex"} justifyContent={"center"}>
           {/* Projeto 1 */}
           <Grid item xs={12} md={6}>
             <ProjectBox>
@@ -97,7 +97,7 @@ const ProjectsImg = styled("img")(({theme}) => ({
               <Typography variant="h6"  gutterBottom>Calculator loan Br</Typography>
               <Typography variant="body2" color="primary.contrastText" gutterBottom>Jul 2023 - Jul 2023</Typography>
             </Box>
-              <Box my={2}>
+              <Box my={0.5}>
                 <ProjectsImg src={Calc} alt="Project-1" style={{ width: '100%', borderRadius: '8px' }} />
               </Box>
               <Typography variant="body1" paragraph>
@@ -121,7 +121,7 @@ const ProjectsImg = styled("img")(({theme}) => ({
               <Typography variant="h6" gutterBottom>Primeiro Portifolio</Typography>
               <Typography variant="body2" color="primary.contrastText" gutterBottom>May 2023 - Jul 2023</Typography>
             </Box>
-              <Box my={3.8}>
+              <Box my={3}>
                 <ProjectsImg src={Portifolio} alt="Project-2" style={{ width: '100%', borderRadius: '8px' }} />
               </Box>
               <Typography variant="body1" paragraph>
